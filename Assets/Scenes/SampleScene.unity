@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 873129088}
   - component: {fileID: 873129087}
   - component: {fileID: 873129086}
+  - component: {fileID: 873129090}
   m_Layer: 0
   m_Name: LowerRightLeg
   m_TagString: Untagged
@@ -529,6 +530,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &873129090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873129084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 150
 --- !u!1 &970997537
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +746,7 @@ GameObject:
   - component: {fileID: 996413233}
   - component: {fileID: 996413235}
   - component: {fileID: 996413234}
+  - component: {fileID: 996413238}
   m_Layer: 0
   m_Name: UpperLeftLeg
   m_TagString: Untagged
@@ -907,6 +923,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1457262113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996413238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996413232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 150
 --- !u!1 &1141428684
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +950,7 @@ GameObject:
   - component: {fileID: 1141428685}
   - component: {fileID: 1141428687}
   - component: {fileID: 1141428686}
+  - component: {fileID: 1141428690}
   m_Layer: 0
   m_Name: UpperRightLeg
   m_TagString: Untagged
@@ -1096,6 +1127,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1457262113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141428690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141428684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 150
 --- !u!1 &1239493917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1662,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1457262113}
+  - component: {fileID: 1457262114}
+  - component: {fileID: 1457262115}
   m_Layer: 0
   m_Name: Stickman
   m_TagString: Untagged
@@ -1649,6 +1696,40 @@ Transform:
   - {fileID: 873129085}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1457262114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457262112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f798e24be117cde46b5b340724e726f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1457262115
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457262112}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a54910fbfa79f8d429a1cf6d58394351, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1479420237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1743,7 @@ GameObject:
   - component: {fileID: 1479420241}
   - component: {fileID: 1479420240}
   - component: {fileID: 1479420239}
+  - component: {fileID: 1479420243}
   m_Layer: 0
   m_Name: LowerLeftLeg
   m_TagString: Untagged
@@ -1838,6 +1920,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1479420243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479420237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 150
 --- !u!1 &1857390517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1946,7 @@ GameObject:
   - component: {fileID: 1857390520}
   - component: {fileID: 1857390518}
   - component: {fileID: 1857390519}
+  - component: {fileID: 1857390522}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -2000,6 +2097,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1457262113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1857390522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857390517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 150
 --- !u!1 &1908415031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2124,7 @@ GameObject:
   - component: {fileID: 1908415035}
   - component: {fileID: 1908415034}
   - component: {fileID: 1908415033}
+  - component: {fileID: 1908415037}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -2179,6 +2291,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1908415037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908415031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ef3e44344be1a4287391f5d2f4012d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 10
 --- !u!1 &2074779527
 GameObject:
   m_ObjectHideFlags: 0
