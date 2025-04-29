@@ -9,7 +9,8 @@ public class IgnoreCollisions : MonoBehaviour
 
         for (int i = 0; 1 < collision.Length; i++)
         {
-            for (int j = i+ 1; j < collision.Length; j++)
+            for (int j = i + 1; j < collision.Length; j++)
+
             {
                 Physics2D.IgnoreCollision(collision[i], collision[j]);
             }
