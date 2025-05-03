@@ -7,7 +7,7 @@ public class IgnoreCollisions : MonoBehaviour
     {
         var collision=GetComponentsInChildren<Collider2D>();
 
-        for (int i = 0; 1 < collision.Length; i++)
+        for (int i = 0; i < collision.Length; i++)
         {
             for (int j = i + 1; j < collision.Length; j++)
 
