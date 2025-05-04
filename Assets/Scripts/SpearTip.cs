@@ -7,8 +7,13 @@ public class SpearTip : MonoBehaviour
     public GameObject playerLLLeg;
     public GameObject playerRLeg;
     public GameObject playerRLLeg;
+    private float trigNumArm = 0;
+    private float trigNumBody = 0;
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {   
+        trigNumArm = trigNumArm + 1;
+        //Debug.Log(trigNumArm);
+        if (trigNumArm > 14) { 
         if (collision.CompareTag("Arm"))
         {
             HingeJoint2D joint = collision.GetComponent<HingeJoint2D>();
@@ -26,24 +31,30 @@ public class SpearTip : MonoBehaviour
                
             }
         }
+        }
 
-        
         if (collision.CompareTag("Head") || collision.CompareTag("Body") || collision.CompareTag("Leg"))
         {
             HingeJoint2D joint = collision.GetComponent<HingeJoint2D>();
-            if (joint != null)
-            {
-                Destroy(joint);
-                Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-                if (rb != null)
-                {
-                    rb.gravityScale = 1f;
-                    rb.constraints = RigidbodyConstraints2D.None;
-                    Vector2 forceDir = new Vector2(Random.Range(-1f, 1f), 1f).normalized;
-                    rb.AddForce(forceDir * 300f);
-                }
+            trigNumBody = trigNumBody + 1;
+            //Debug.Log(trigNumBody);
+            if (trigNumBody > 7)
 
-            }
+            {
+                if (joint != null)
+                {
+                    Destroy(joint);
+                    Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+                    if (rb != null)
+                    {
+                        rb.gravityScale = 1f;
+                        rb.constraints = RigidbodyConstraints2D.None;
+                        Vector2 forceDir = new Vector2(Random.Range(-1f, 1f), 1f).normalized;
+                        rb.AddForce(forceDir * 300f);
+                    }
+
+                }
+            
             Balance balanceScript = playerBody.GetComponent<Balance>();
             if (balanceScript != null)
             {
@@ -68,6 +79,7 @@ public class SpearTip : MonoBehaviour
             if (balanceScriptRLLeg != null)
             {
                 balanceScriptRLLeg.enabled = false;
+            }
             }
         }
     }

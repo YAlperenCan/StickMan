@@ -5,14 +5,14 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     public float moveSpeed = 3f;
-    public float jumpForce = 40f;
+    public float jumpForce = 80f;
 
     private float inputX;
     private bool isMoving = false;
     private bool isGrounded = false;
 
     public Transform groundCheck; 
-    public float groundCheckRadius = 0.3f;
+    public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
     void Update()
@@ -35,6 +35,16 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+        if (rb.linearVelocity.y < 0)
+        {
+            
+            rb.gravityScale = 3f;
+        }
+        else
+        {
+         
+            rb.gravityScale = 1f;
         }
     }
 
